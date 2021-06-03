@@ -1,0 +1,177 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Globals */
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    background: rgb(99,137,218);
+    background-image: linear-gradient(0deg, hsl(240, 73%, 65%) 39%, rgba(175,103,233,1) 78%); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* Center contenedor */
+.contenedor{
+    width: 100%;
+    min-height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card */
+.card{
+    margin: 50px auto;
+    width: 850px;
+    padding: 60px 0;
+    height: 480px;
+    border-radius: 20px;
+    background: white;
+    background-image: url(/images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position-x: -575px;
+    background-position-y: -290px;
+    
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.card_img{
+    width: 100%;
+    height: 400px;
+    background-image: url(/images/illustration-woman-online-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center center;   
+    background-position-x: -80px;
+
+    
+    display: flex;
+    align-items: center;
+}
+.mobile-img {
+    display: none;
+}
+.box-img {
+    position: relative;
+    left: -94px;
+    top: 50px;
+}
+
+/* acordeon */
+.acordeon{
+    margin: 0 60px;
+    font-size: 12px;
+}
+
+.acordeon input{
+    display: none;
+}
+.acordeon__titulo{
+    color: hsl(237, 12%, 33%);
+    padding: 15px 0;
+    cursor: pointer;
+    border-bottom: 1px solid hsla(240, 6%, 50%, 0.153);
+}
+
+.acordeon__titulo:hover{
+    color:hsl(14, 88%, 65%)
+}
+.acordeon__contenido{
+    color: hsl(240, 6%, 50%);
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    transition: all 0.5s;
+}
+.acordeon input:checked ~ .acordeon__contenido{ /*Para mostrar el texto*/
+    height: auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid hsla(240, 6%, 50%, 0.153);
+}
+.acordeon input:checked ~ .acordeon__titulo{
+    border: none;
+    color: hsl(238, 29%, 16%);
+    font-weight: 700;
+}
+
+.acordeon__titulo{
+    display: flex;
+    justify-content: space-between;
+}
+.acordeon__titulo img{
+    width: 15px;
+    height: 10px;
+}
+.acordeon input:checked ~ .acordeon__titulo img{
+    transform: rotate(-180deg);
+}
+
+.attribution{
+    display: block ruby;
+    margin: 30px;
+    padding-left: 40%;
+    color: hsl(240, 5%, 91%);
+    text-align: center;
+}
+.attribution a{
+    text-decoration: none;
+    color: hsl(273, 75%, 66%);
+}
+.attribution a:hover{
+    color: hsl(273, 91%, 37%);
+}
+
+
+/* Media Query */
+@media screen and (max-width: 768px) {
+
+    body{
+        background-image: linear-gradient(0deg, hsl(240, 73%, 65%) , rgba(175,103,233,1) 100%); 
+    }
+
+    .contenedor {
+        min-height: 110vh;
+    }
+
+    .card{
+        margin: 150px auto;
+        width: 90%;
+        background-image: url(../images/bg-pattern-mobile.svg);
+        background-size: auto;
+        background-position: top center;
+        padding: 0;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .card_img{
+        background-image: none;
+        justify-content: center;
+        height: 140px;
+    }
+    .mobile-img {
+        display: block;
+        margin-bottom: 160px;
+        margin-left: -30px;
+    }
+    .box-img {
+        display: none;
+    }
+    h2{
+        text-align: center;
+    }
+    .acordeon{
+        width: 85%;
+        margin: 0 auto;
+        padding-bottom: 60px;
+        font-size: 14px;
+    }
+}
