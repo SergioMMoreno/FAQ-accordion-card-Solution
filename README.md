@@ -32,8 +32,8 @@ Los usuarios deben poder:
 
 ### enlaces
 
-- Solución URL: [Add solution URL here](https://github.com/SergioMMoreno/FAQ-accordion-card-Solution)
-- Sitio para verlo URL: [Add live site URL here](https://tender-rosalind-21ab95.netlify.app/)
+- Solución URL: [Repositorio](https://github.com/SergioMMoreno/FAQ-accordion-card-Solution)
+- Sitio para verlo URL: [Netlify](https://tender-rosalind-21ab95.netlify.app/)
 
 ## My process
 
